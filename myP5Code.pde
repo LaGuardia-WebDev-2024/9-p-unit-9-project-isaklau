@@ -4,6 +4,7 @@ setup = function() {
 
 var answer = 1;
 
+
 draw = function(){
   background(100,100,100);
   fill(0, 0, 0);
@@ -13,8 +14,29 @@ draw = function(){
   fill(255, 255, 255);
   
   if (answer == 1) {
-    text("YOUR", 176, 200);
-    text("MESSAGE", 159, 229); 
+    text("ASK THE", 172, 200);
+    text("STARS", 177, 229); 
+  }
+  if (answer == 2){
+    text("NOT TOO", 172, 200);
+    text("SURE ABOUT THAT", 148, 229);
+  }
+  if (answer == 3){
+    text("LOOKS", 175, 200);
+    text("PROMISING", 170,  229);
+  }
+  if (answer == 4){
+    text("WELL", 177, 200);
+    text("YES", 180, 229);
+  }
+  if (answer == 5){
+    text("YIKES,", 177, 200);
+    text("NO", 185, 229);
+  }
+  if (mousePressed){
+  textSize(75);
+  fill(mouseX, mouseY);
+  drawStar(random(-100,600), random(-100,600));
   }
   
 };
@@ -22,5 +44,12 @@ draw = function(){
 mouseClicked = function(){
   answer = round(random(1, 5));
 };
+
+var drawStar = function(starX, starY){
+textSize(100);
+text("★", starX, starY);
+}
+  
+  
 
 
