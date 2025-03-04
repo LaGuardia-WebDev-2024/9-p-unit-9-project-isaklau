@@ -11,6 +11,10 @@ h1{
   font-size: 30px;
   color: white;
 }
+h2{
+  font-size:25px;
+  color: white;
+}
 
 #myCanvas {
   background-size: 600px 400px;
